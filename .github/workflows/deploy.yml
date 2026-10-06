@@ -3,8 +3,7 @@ name: CI/CD Pipeline - Docker a Azure
 on:
   push:
     branches:
-      - main
-      - feature
+      - features # Esto obliga a que Actions se ejecute en esta rama
 
 jobs:
   build-and-deploy:
@@ -20,19 +19,17 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Formatear nombre en minúsculas
-        run: echo "REPO=${GITHUB_REPOSITORY,,}" >>${GITHUB_ENV}
 
       - name: Construir y subir imagen Docker
         uses: docker/build-push-action@v4
         with:
           context: .
           push: true
-          tags: ghcr.io/${{ env.REPO }}/ecommerce-api:latest
+          tags: ghcr.io/victorp8/e-comerce-ics2026-backend/ecommerce-api:latest
 
       - name: Desplegar en Azure Web App
         uses: azure/webapps-deploy@v2
         with:
-          app-name: 'api-backend' # Verifica que coincida con el nombre de tu App en Azure
+          app-name: 'api-backend'
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          images: 'ghcr.io/${{ env.REPO }}/ecommerce-api:latest'
+          images: 'ghcr.io/victorp8/e-comerce-ics2026-backend/ecommerce-api:latest'
