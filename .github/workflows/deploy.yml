@@ -3,7 +3,7 @@ name: CI/CD Pipeline - Docker a Azure
 on:
   push:
     branches:
-      - main
+      - feature
 
 jobs:
   build-and-deploy:
