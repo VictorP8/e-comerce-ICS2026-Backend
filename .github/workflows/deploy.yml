@@ -9,7 +9,7 @@ on:
 
 env:
   DOCKERHUB_USERNAME: ${{ secrets.DOCKERHUB_USERNAME }}
-  IMAGE_NAME: ics2026_docker # <-- CAMBIAR por el nombre de su repositorio en Docker Hub
+  IMAGE_NAME: ics2026_docker
 
 jobs:
   build-and-deploy:
