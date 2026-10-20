@@ -25,11 +25,7 @@ jobs:
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: 3. Construir la imagen Docker (.NET 8)
-        run: |
-          docker build \
-            -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} \
-            -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest \
-            -f Dockerfile .
+        run: docker build -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:${{ github.sha }} -t ${{ env.DOCKERHUB_USERNAME }}/${{ env.IMAGE_NAME }}:latest -f Dockerfile .
 
       - name: 4. Subir la imagen a Docker Hub
         if: github.event_name != 'pull_request'
