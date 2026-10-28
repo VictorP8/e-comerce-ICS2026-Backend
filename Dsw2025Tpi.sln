@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36203.30 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.9.12112.369 stable
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsw2025Tpi.Api", "Dsw2025Tpi.Api\Dsw2025Tpi.Api.csproj", "{3E1F7E28-184B-4B7A-8C2E-BE3D7BF65F67}"
 EndProject
@@ -12,6 +12,8 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsw2025Tpi.Data", "Dsw2025Tpi.Data\Dsw2025Tpi.Data.csproj", "{E34B93C6-D34C-409A-AAF4-908795FFEB4E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsw2025Tpi.Application", "Dsw2025Tpi.Application\Dsw2025Tpi.Application.csproj", "{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Dsw2025Tpi.Tests1", "Dsw2025Tpi.Tests1\Dsw2025Tpi.Tests1.csproj", "{C4DCF869-A826-4C37-BEF1-1246C76D2DBB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -35,6 +37,10 @@ Global
 		{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AD606BCA-F693-45E2-A6BD-3C7FCBADE0D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DCF869-A826-4C37-BEF1-1246C76D2DBB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DCF869-A826-4C37-BEF1-1246C76D2DBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DCF869-A826-4C37-BEF1-1246C76D2DBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DCF869-A826-4C37-BEF1-1246C76D2DBB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

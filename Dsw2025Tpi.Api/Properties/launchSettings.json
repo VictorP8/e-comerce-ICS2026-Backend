@@ -36,6 +36,20 @@
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
+    },
+    "Docker": {
+      "commandName": "Docker",
+      "launchBrowser": true,
+      "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "ConnectionStrings__Dsw2025TpiEntities": "Server=TU_SERVER_SQL_LOCAL;Initial Catalog=Dsw2025Tpi;User Id=sa;Password=TuPasswordLocal123;TrustServerCertificate=True;",
+        "Jwt__key": "ClaveSecretaLocalMuyLargaParaDesarrollo1234567890",
+        "Jwt__issuer": "Dsw2025Tpi.Api",
+        "Jwt__audience": "Dsw2025Tpi.ApiUsers",
+        "Jwt__ExpiresInMinutes": "60"
+      },
+      "publishAllPorts": true
     }
   }
-}
+
