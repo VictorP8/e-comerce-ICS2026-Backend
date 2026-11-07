@@ -42,8 +42,8 @@
       "launchBrowser": true,
       "launchUrl": "{Scheme}://{ServiceHost}:{ServicePort}/swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "ConnectionStrings__Dsw2025TpiEntities": "Server=TU_SERVER_SQL_LOCAL;Initial Catalog=Dsw2025Tpi;User Id=sa;Password=TuPasswordLocal123;TrustServerCertificate=True;",
+        "ASPNETCORE_ENVIRONMENT": "Development", // el id y password no se suben a git, se deben cambiar por variables de entorno en el servidor
+        "ConnectionStrings__Dsw2025TpiEntities": "Server=tcp:srv-ecommerce.database.windows.net,1433;Initial Catalog=DB_ecomerce;Persist Security Info=False;User ID=admin_sql;Password=1234Hifi;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
         "Jwt__key": "ClaveSecretaLocalMuyLargaParaDesarrollo1234567890",
         "Jwt__issuer": "Dsw2025Tpi.Api",
         "Jwt__audience": "Dsw2025Tpi.ApiUsers",
@@ -52,4 +52,4 @@
       "publishAllPorts": true
     }
   }
-
+}

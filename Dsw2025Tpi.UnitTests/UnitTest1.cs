@@ -1,4 +1,4 @@
-﻿namespace Dsw2025Tpi.Tests1
+namespace Dsw2025Tpi.UnitTests
 {
     public class UnitTest1
     {
