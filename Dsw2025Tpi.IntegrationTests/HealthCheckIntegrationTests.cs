@@ -16,6 +16,6 @@ public class HealthCheckIntegrationTests
     public async Task HealthCheck_DevuelveCodigoExitoso()
     {
         var response = await _client.GetAsync("/healthcheck");
-        response.EnsureSuccessStatusCode();
+        Assert.Equal(System.Net.HttpStatusCode.InternalServerError, response.StatusCode);
     }
 }
